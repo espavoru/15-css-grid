@@ -87,3 +87,43 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/*===================================
+=            Grid styles            =
+===================================*/
+.page .embed-responsive {
+
+  &::before {
+    padding-top: 74%;
+  }
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+
+  height: 80vh;
+}
+
+.grid-items {
+  padding: 15px;
+
+  font-size: 30px;
+  line-height: 1.5;
+
+  background-color: yellowgreen;
+  transition: all 0.5s;
+
+  &:nth-of-type(5) {
+    grid-area: 1 / 2 / span 2 / span 2;
+    background-color: darken(yellowgreen, 15%);
+  }
+
+  &:hover {
+    background-color: mediumpurple;
+  }
+}
+
+
+/*=====  End of Grid styles  ======*/
