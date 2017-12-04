@@ -91,23 +91,26 @@ img {
 /*===================================
 =            Grid styles            =
 ===================================*/
-.page .embed-responsive {
-
-  &::before {
-    padding-top: 74%;
-  }
-}
-
 .container {
   display: grid;
   grid-gap: 20px;
-  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
 
-  height: 80vh;
+  min-height: 100vh;
 }
 
-.grid-items {
-  padding: 15px;
+.box {
+
+  &:nth-child(5) {
+
+  }
+}
+
+.container > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // padding: 15px;
 
   font-size: 30px;
   line-height: 1.5;
@@ -115,9 +118,10 @@ img {
   background-color: yellowgreen;
   transition: all 0.5s;
 
-  &:nth-of-type(5) {
-    grid-area: 1 / 2 / span 2 / span 2;
-    background-color: darken(yellowgreen, 15%);
+
+  &:nth-child(2) {
+    // grid-area: 1 / 2 / span 2 / span 1;
+    // background-color: skyblue;
   }
 
   &:hover {
@@ -125,5 +129,5 @@ img {
   }
 }
 
-
+// yellowgreen mediumseagreen skyblue mediumpurple palegoldenrod dodgerblue orangered
 /*=====  End of Grid styles  ======*/
